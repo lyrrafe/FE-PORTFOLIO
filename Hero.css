@@ -1,0 +1,22 @@
+.hero {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+  }
+  
+  .hero-content {
+    text-align: center; /* Align text to the right */
+  }
+  
+  .hero-image img {
+    width: 300px; /* Adjust image size */
+    height: auto;
+    border-radius: 10px; 
+    margin-left: 150px;
+  }
+
+  .cta-button {
+    align-items: left;
+  }
