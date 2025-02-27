@@ -1,0 +1,63 @@
+/* Import Poppins Font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+
+/* General Styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #f2f5ea; /* Light Matcha Background */
+  color: #2f5233; /* Deep Green for Text */
+}
+
+/* About Section */g
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Full height */
+  text-align: center;
+  padding: 3rem;
+  margin-top: 60px; /* Adjust for fixed navbar */
+}
+
+/* Content Box */
+.about-content {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  text-align: center;
+}
+
+/* About Title */
+.about h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #2f5233;
+  margin-bottom: 1rem;
+}
+
+/* About Paragraph */
+.about p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #2f5233;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-content {
+    padding: 2rem;
+    max-width: 90%;
+  }
+
+  .about h1 {
+    font-size: 2.5rem;
+  }
+
+  .about p {
+    font-size: 1rem;
+  }
+}

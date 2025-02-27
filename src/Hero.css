@@ -1,0 +1,149 @@
+/* Import Poppins Font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+
+/* General Styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  color: wheat;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: transparent; /* Fully transparent */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  box-shadow: none; /* Remove shadow if not needed */
+  z-index: 100;
+}
+
+.navbar-logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: sienna;
+  padding-left: 5%;
+}
+
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  padding-right: 5%;
+}
+
+.navbar-menu li {
+  display: inline;
+}
+
+.navbar-menu a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: sienna;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar-menu a:hover {
+  color: wheat;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 3rem;
+  margin-top: 20px; /* Adjust for fixed navbar */
+
+  /* Background Image */
+  background-image: url('./herobackground.png'); /* If in public/ */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* Ensure it fills the whole browser window */
+  width: 100vw;
+  height: 100vh; /* Full viewport height */
+
+  /* Optional - Makes sure content doesn't overflow */
+  overflow: hidden;
+}
+
+
+/* Align Image and Text Side by Side */
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  max-width: 1200px;
+  width: 100%;
+}
+
+/* Hero Image */
+.hero-image img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  outline: sienna;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Hero Text */
+.hero-text {
+  max-width: 500px;
+}
+
+.hero-text h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  color: sienna;
+  text-align: center;
+}
+
+.hero-text p {
+  font-size: 1rem;
+  opacity: 0.8;
+  text-align: center;
+  color: chocolate;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .hero-image img {
+    width: 400x;
+    height: 400px;
+  }
+
+  .hero-text {
+    max-width: 100%;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-text p {
+    font-size: 2.5rem;
+  }
+
+  .cta-button {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+}
