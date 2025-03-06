@@ -1,59 +1,122 @@
+/* Navbar */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background: rgba(255, 255, 255, 0.1); /* Light transparent background */
-  backdrop-filter: blur(10px); /* Blurry effect */
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    box-shadow: none;
-    z-index: 100;
-    width: 100%;
-    transition: all 0.3s ease-in-out;
-  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: rgba(255, 182, 193, 0.2); /* Light pastel pink */
+  backdrop-filter: blur(10px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
   
-  .navbar-logo {
-    font-size: 2rem;
-    font-weight: bold;
-    color: sienna;
-    padding-left: 5%;
+}
+
+/* Navbar Logo */
+.navbar-logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #b66b75; /* Hot Pink */
+  padding-left: 5%;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar-logo:hover {
+  color: #dda0dd; /* Lavender */
+}
+
+/* Navbar Menu */
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  padding-right: 5%;
+}
+
+.navbar-menu li {
+  display: inline;
+}
+
+.navbar-menu a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: #db7093; /* Pale pink */
+  transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.navbar-menu a:hover {
+  color: #b19cd9; /* Pastel purple */
+  transform: translateY(-3px);
+  text-shadow: 0px 3px 10px rgba(255, 105, 180, 0.4);
+}
+
+/* Hamburger Icon */
+.navbar-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.navbar-toggle div {
+  width: 30px;
+  height: 3px;
+  background: #ff69b4; /* Hot Pink */
+  margin: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1rem;
   }
-  
+
   .navbar-menu {
-    list-style: none;
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: rgba(255, 240, 245, 0.95); /* Light pastel pink */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 1rem 0;
+    border-radius: 0 0 15px 15px;
+  }
+
+  .navbar-menu.active {
     display: flex;
-    gap: 1.5rem;
-    padding-right: 5%;
   }
-  
+
   .navbar-menu li {
-    display: inline;
+    padding: 1rem;
   }
-  
-  .navbar-menu a {
-    text-decoration: none;
-    font-size: 1.5rem;
-    color: sienna;
-    transition: color 0.3s ease-in-out;
+
+  .navbar-toggle {
+    display: flex;
   }
-  
-  .navbar-menu a:hover {
-    color: wheat;
-  }
-  
-  @media (max-width: 768px) {
-    .navbar {
-      flex-direction: column;
-      align-items: center;
-      padding: 1rem;
-    }
-    .navbar-menu {
-      flex-direction: column;
-      text-align: center;
-      gap: 1rem;
-    }
-  }
-  
+}
+
+/* Navbar Toggle Animation */
+.navbar-toggle.active div:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+  background: #b19cd9; /* Pastel purple */
+}
+
+.navbar-toggle.active div:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar-toggle.active div:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+  background: #b19cd9; /* Pastel purple */
+}
+
+
+

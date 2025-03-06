@@ -1,19 +1,38 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import "./Navbar.css";
+import { useEffect } from "react";
+import './navbar.css'
+function Navbar() {
+  useEffect(() => {
+    const toggleButton = document.querySelector(".navbar-toggle");
+    const navbarMenu = document.querySelector(".navbar-menu");
 
-const Navbar = () => {
+    const toggleMenu = () => {
+      navbarMenu.classList.toggle("active");
+      toggleButton.classList.toggle("active");
+    };
+
+    toggleButton.addEventListener("click", toggleMenu);
+
+    return () => {
+      toggleButton.removeEventListener("click", toggleMenu);
+    };
+  }, []);
+
   return (
     <nav className="navbar">
-      <div className="navbar-logo">LYR</div>
+      <div className="navbar-logo">LYRRA FE</div>
+      <div className="navbar-toggle">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
       <ul className="navbar-menu">
         <li><a href="/hero">Home</a></li>
-        <li><Link to="/about">About</Link></li>
-        <li><a href="#contact">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
       </ul>
     </nav>
   );
-};
+}
 
 export default Navbar;
