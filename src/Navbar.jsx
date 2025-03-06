@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import './navbar.css'
+import './Navbar.css'
 function Navbar() {
   useEffect(() => {
     const toggleButton = document.querySelector(".navbar-toggle");
