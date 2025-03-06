@@ -1,6 +1,10 @@
 import { useEffect } from "react";
+<<<<<<< HEAD
 import './navbar.css'
 
+=======
+import './Navbar.css'
+>>>>>>> 0811aa0b33df1737b9e75dae312c3885a5d06336
 function Navbar() {
   useEffect(() => {
     const toggleButton = document.querySelector(".navbar-toggle");
