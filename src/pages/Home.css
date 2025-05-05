@@ -1,0 +1,57 @@
+.home-page {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.home-background {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.home-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.picture-container {
+  flex: 0 0 45%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  z-index: 0;
+}
+
+.picture-container img {
+  max-width: 40%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  opacity: 0.8; /* Adjust opacity to make it more background-like */
+}
+
+/* Make the layout responsive */
+@media (max-width: 768px) {
+  .home-content {
+    flex-direction: column;
+  }
+  
+  .picture-container {
+    position: relative;
+    margin-top: 20px;
+    width: 100%;
+    height: auto;
+  }
+}

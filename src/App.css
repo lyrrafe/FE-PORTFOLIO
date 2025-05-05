@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --primary-color: #ffb7c5; /* Sakura pink */
+  --secondary-color: #fff0f5; /* Lavender blush */
+  --accent-color: #ff758c; /* Deeper pink */
+  --text-color: #4a4a4a;
+  --light-text: #ffffff;
+  --background-color: #fff9fb;
+  --gradient-bg: linear-gradient(135deg, #fff0f5 0%, #ffb7c5 100%);
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+  --navbar-height: 80px;
+  --footer-height: 300px; /* Approximate footer height */
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* App Container */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  padding-top: var(--navbar-height); /* Space for fixed navbar */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Container for sections */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Section styling */
+.section {
+  width: 100%;
+  padding: 4rem 0;
+}
+
+/* Button styling */
+.btn {
+  display: inline-block;
+  background: var(--accent-color);
+  color: var(--light-text);
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 500;
+  transition: var(--transition);
+  box-shadow: var(--shadow);
+}
+
+.btn:hover {
+  background: #ff5a7a;
+  transform: translateY(-3px);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--accent-color);
+  color: var(--accent-color);
+}
+
+.btn-outline:hover {
+  background: var(--accent-color);
+  color: var(--light-text);
+}
+
+/* Typography */
+h1, h2, h3, h4 {
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Page styling */
+.page {
+  min-height: calc(100vh - var(--navbar-height) - var(--footer-height));
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .section {
+    padding: 3rem 0;
+  }
+  
+  .container {
+    padding: 0 1rem;
+  }
+}

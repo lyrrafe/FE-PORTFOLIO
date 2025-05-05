@@ -1,0 +1,125 @@
+.contact-page {
+    width: 100%;
+    padding: 6rem 0;
+  }
+  
+  .contact-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 3rem;
+  }
+  
+  .contact-info {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+  }
+  
+  .contact-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+  }
+  
+  .contact-icon {
+    font-size: 1.5rem;
+    color: var(--accent-color);
+    margin-right: 1rem;
+    width: 30px;
+  }
+  
+  .contact-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .contact-item p {
+    color: #666;
+  }
+  
+  .social-links h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: var(--secondary-color);
+    border-radius: 50%;
+    color: var(--text-color);
+    font-size: 1.2rem;
+    transition: var(--transition);
+  }
+  
+  .social-icons a:hover {
+    background: var(--accent-color);
+    color: white;
+    transform: translateY(-3px);
+  }
+  
+  .contact-form-container {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+  }
+  
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: var(--transition);
+  }
+  
+  .form-group input:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 2px rgba(255, 117, 140, 0.2);
+  }
+  
+  .contact-form .btn {
+    align-self: flex-start;
+    padding: 0.8rem 2rem;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .contact-content {
+      grid-template-columns: 1fr;
+    }
+    
+    .contact-form .btn {
+      width: 100%;
+      text-align: center;
+    }
+  }
+  
