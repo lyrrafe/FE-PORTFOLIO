@@ -51,7 +51,7 @@ const Navbar = () => {
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="navbar-container">
         <Link to="/" className="navbar-logo">
-          <span className="logo-text">YourName</span>
+          <span className="logo-text">Lyrra Fe</span>
         </Link>
         
         <div className={`menu-icon ${menuOpen ? 'active' : ''}`} onClick={toggleMenu}>
@@ -81,6 +81,11 @@ const Navbar = () => {
           <li className="nav-item">
             <Link to="/experience" className={location.pathname === '/experience' ? 'nav-link active' : 'nav-link'}>
               Experience
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/certifications" className={location.pathname === '/certifications' ? 'nav-link active' : 'nav-link'}>
+              Certifications
             </Link>
           </li>
           <li className="nav-item">
