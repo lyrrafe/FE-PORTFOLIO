@@ -6,9 +6,13 @@ const Home = () => {
     <div className="page home-page">
       <div className="home-background">
         <div className="home-content">
-          <Hero />
-          <div className="picture-container">
-            <img src="/fe.jpeg" alt="Featured content" />
+          <div className="home-layout">
+            <div className="profile-image-container">
+              <div className="profile-image-circle">
+                <img src="/fe.jpeg" alt="Lyrra Fe" />
+              </div>
+            </div>
+            <Hero />
           </div>
         </div>
       </div>

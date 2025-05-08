@@ -11,7 +11,7 @@ const Footer = () => {
       <div className="container">
         <div className="footer-content">
           <div className="footer-logo">
-            <Link to="/">YourName</Link>
+            <Link to="/">Lyrra Fe</Link>
             <p>
               A passionate frontend developer focused on creating beautiful and user-friendly web experiences.
             </p>
@@ -49,7 +49,7 @@ const Footer = () => {
         </div>
         
         <div className="footer-bottom">
-          <p>&copy; {currentYear} YourName. All rights reserved.</p>
+          <p>&copy; {currentYear} Lyrra Fe. All rights reserved.</p>
         </div>
       </div>
     </footer>
